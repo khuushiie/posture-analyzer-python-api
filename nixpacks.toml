@@ -5,7 +5,7 @@ python = "3.10"
 nixPkgs = ["libGL"]
 
 [phases.install]
-cmds = ["python3 -m pip install --upgrade pip", "pip install -r requirements.txt"]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [phases.start]
 cmd = "gunicorn app:app --bind 0.0.0.0:$PORT"
